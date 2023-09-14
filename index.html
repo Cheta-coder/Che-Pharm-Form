@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Che-Pharm Form</title>
+
+</head>
+<body>
+    <style>
+        body{
+            margin: 10% 28%;
+        }
+        header{
+            background-color: #d9d9d9;
+        }
+        h4{
+            margin: -3% 0 5% 0;
+        }
+        .title{
+            margin-top: -5%;
+        }
+        .width{
+            margin: 1%;
+            padding: 1%;
+        }
+        .inputdiv{
+            display: flex;
+		    flex-direction: row;
+		    flex-wrap: wrap;
+		    justify-content: space-between;
+        }
+        .password, .date{
+            margin-left: -41%;
+        }
+        .date{
+            margin-left: -112%;
+        }
+        label{
+            display: inline-block;
+            margin: 5% 0 0% 0;
+        }
+        .submit{
+            margin: 5% 0 0 20%;
+            color: white;
+            background-color: #6d6b6b;
+            border-color: white;
+        }
+        .submit:hover{
+            color: #6d6d6d;
+            background-color: white;
+            border-color: #6d6a6a;
+        }
+    </style>
+    <header>
+        <h1>Che-Pharm's Pharmaceutical Council</h1>
+        <h3>Registration of a pharmacist</h3>
+        <h4>Guidance and application form</h4>
+        <hr>
+    </header>
+    <label for="searchField">Search here</label>
+    <input type="search" name="searchField" placeholder="Search products"> <br> <br>
+    <input type="submit" value="Search" onclick="show()">
+    <main>
+        
+        <form>
+            <label class="title" for="title">Title:</label> <br>
+            <label for="mr">Mr</label>
+            <input class="title" type="radio" name="survey" value="Mr">
+            <label for="mrs">Mrs</label>
+            <input class="title" type="radio" name="survey" value="Mrs">
+            <label for="ms">Ms</label>
+            <input class="title" type="radio" name="survey" value="Ms">
+            <label for="miss">Miss</label>
+            <input class="title" type="radio" name="survey" value="Miss">
+            <label for="other">Other (specify)</label>
+            <input id="other" type="radio" name="survey" value="other"> <br>
+            <!-- <label class="radio" for="other"><input id="other" type="radio" name="survey" value="other">Other (specify)</label>
+            <input id="other-text" type="text" name="survey" placeholder="specify" disabled="disabled"> -->
+            <label for="names">Names:</label> <br>
+            <input class="width" type="text" name="surname" placeholder="Surname">
+            <input class="width" type="text" name="first name" placeholder="First name"> <br>
+            <input class="width" type="text" name="middle name" placeholder="Middle name"> <br>
+            <div class="inputdiv">
+                <div>
+                    <label for="email">Email Address:</label> <br>
+                    <input class="width" type="email" name="email" placeholder="Your email">
+                </div>
+                <div>
+                    <label for="password" class="password">Password:</label><br>
+                    <input class="width password" type="password" name="password" placeholder="Password"> <br>
+                </div>
+            </div>
+            <div class="inputdiv">
+                <div>
+                    <label for="tel">Phone Number:</label> <br>
+                    <input class="width" type="tel" name="tel number" placeholder="Phone number"> <br>
+                </div>
+                <div>
+                    <label for="date" class="date">Year of Birth:</label> <br>
+                    <input class="width date" name="date of birth" type="date">
+                </div>
+            </div>
+            <p>Would you want to leave drugs or share product information?</p>
+            <input class="sale-type" id="information" type="checkbox" value="Sharing product information" name="product1" >
+            <label for="information">Sharing product information</label>
+            <input class="sale-type" id="sample" type="checkbox" value="Leaving samples" name="product2">
+            <label for="sample">Leaving samples</label>
+            <input class="sale-type" id="both" type="checkbox" value="Both" name="product3" >
+            <label for="both">Both</label> <br>
+            <input class="submit" type="submit" value="Register">
+        </form>
+    </main>
+   <!-- <script type="text/javascript">
+        $(function(){
+            $("form input[type=radio]").click
+            (function (){
+                button ("other")
+                var value = $(this).val();
+                $(this).closest("form").find
+                ("input[type=text]")
+                .attr("disabled", "disabled").end();
+                button("other").end().find("." + value)
+                .removeAttr("disabled").end();
+            });
+        });
+   </script>  -->
+   <script src="./index.js"></script>
+</body>
+</html>
